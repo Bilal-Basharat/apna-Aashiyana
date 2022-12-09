@@ -100,6 +100,46 @@ img{
     height: 100%;
     object-fit: cover;
 }
+.header .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    z-index: 1;
+    text-align: center;
+}
+.header .content h1{
+    font-size: 7rem;
+    color: white;
+    margin-bottom: 4rem;
+}
+.header .search{
+    width: 70rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .search input{
+    width: 100%;
+    padding: 1.5rem 0;
+    text-indent: 1rem;
+    font-size: 1.6rem;
+    outline: none;
+    border: none;
+    margin-right:1rem ;
+}
+.header .search a{
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    background-color: green;
+    color: white;
+    border-radius: 0.5rem ;
+}
+
 @media (max-width: 768px) {
     .nav-list{
         position: fixed;
