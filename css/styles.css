@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: "roboto","sans-serif";
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: var(-white);
+    color: var(--black);
+    font-weight: 400;
+    font-style: normal;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+.header{
+    position: relative;
+    min-height: 100 vh;
+    overflow: hidden;
+    z-index: 0;
+}
+.header:hover{
+    right: 40px;
+    left: 40px;
+}
+.navigation{
+    position: relative;
+    z-index: 2;
+    height: 6rem;
+    line-height: 6rem;
+}
+.nav-centre{
+    justify-content: space-between;
+}
+.nav-centre .nav-item:not(:last-child){
+    margin-right: 0.5rem;
+}
+.nav-centre .nav-link{
+    font-size: 1.8rem;
+    padding: 1rem;
+    color: black;
+}
+.nav-centre .nav-link:hover{
+    color: green;
+}
+.nav-centre .hamBurger{
+    display: none;
+    font-size: 2.3rem;
+    color: black;
+    cursor: pointer;
+}
+.container {
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-list .open{
+    width: 100%;
+    left: 0;
+}
+.nav-list .nav-item{
+    margin: 0 0 1rem 0;
+    width: 100%;
+}
+.nav-list .nav-link{
+    font-size: 2rem;
+    color:black;
+}
+.nav-centre .hamBurger{
+    display: block;
+    color: white;
+    font-size: 3rem;
+}
+.hero, .heroSlider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+    .nav-list{
+        position: fixed;
+        top: 12%;
+        left: -100%;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+        height: 100%;
+        max-width: 35rem;
+        z-index: 100;
+    }
+}
