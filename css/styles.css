@@ -14,7 +14,7 @@ html{
 body{
     font-family: "Roboto", sans-serif;
     background-color: var(-white);
-    color: var(--black);
+    color: black;
     font-weight: 400;
     font-style: normal;
 }
@@ -28,21 +28,20 @@ img{
 .header{
     position: relative;
     min-height: 100 vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 0;
 }
-/* .header:hover{
-    right: 40px;
-    left: 40px;
-} */
 .navigation{
-    position: relative;
-    z-index: 1;
     height: 80rem;
-    line-height: 6rem;
 }
 .nav-centre{
-    justify-content: space-between;
+    /* border: 1px solid black; */
+    z-index: 2;
+    position: -webkit-sticky;
+    position: sticky;
+    /* position: sticky; */
+    top: 0px;
+    /* width: 100%; */
 }
 .nav-centre .nav-item:not(:last-child){
     margin-right: 0.5rem;
@@ -53,45 +52,50 @@ img{
     color: black;
 }
 .nav-centre .nav-link:hover{
-    color: green;
+    color: rgb(0, 168, 90);
 }
 .nav-centre .hamBurger{
     display: none;
     font-size: 2.3rem;
-    color: black;
     cursor: pointer;
 }
 .container {
-    max-width: 115rem;
-    margin-left: 80px;
-    padding: 0;
+    max-width: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
     /* border: 1px solid black; */
 }
 .flex {
+    padding-left: 100px;
+    background-color: rgb(255, 241, 216);
     display: flex;
-    justify-content: space-between;
+    justify-content:left;
     align-items: center;
+}
+.nav-list{
+    padding-left: 200px;
 }
 .nav-list .open{
     width: 100%;
     left: 0;
 }
 .nav-list .nav-item{
+    padding-left: 15px;
     margin: 0 0 1rem 0;
     width: 100%;
 }
 .nav-list .nav-link{
     font-size: 2rem;
-    color:black;
+    color:rgb(0, 108, 100);
 }
 .nav-centre .hamBurger{
-    display: block;
+    display: none;
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    cursor: pointer;
 }
 .hero, .heroSlider{
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 70px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -158,11 +162,32 @@ img{
         max-width: 35rem;
         z-index: 100;
     }
+    .nav-list .nav-item{
+        margin: 0 0 1rem 0;
+        width: 100%;
+    }
+    .nav-list .nav-link{
+        font-size: 2rem;
+        color:white;
+    }
+    .nav-centre .hamBurger{
+        display: block;
+        color: white;
+        font-size: 3rem;
+    }
 }
 @media (max-width: 996px) {
     .header .content h1{
         font-size: 5rem;
         margin-bottom: 2rem ;
+    }
+    .header .search{
+        width: 50rem;
+    }
+}
+@media (max-width: 567px) {
+    .header .content h1{
+        font-size: 3rem;
     }
     .header .search{
         width: 100%;
@@ -174,4 +199,91 @@ img{
     .header .search a{
         padding: 1rem;
     }
+}
+.section{
+    padding: 10rem 0;
+    z-index: 2;
+}
+
+/* rent section */
+/* .section .rent{
+    background-color: wheat;
+}
+.rent-center{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 4rem 2rem;
+}
+.title{
+    text-align: center;
+    margin-bottom: 5rem;
+    padding: 1rem;
+}
+.title h1{
+    font-weight: 100;
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+.rent .box{
+
+} */
+
+/* contact styling */
+
+.contact{
+    color: white;
+    padding: 10rem 20rem;
+}
+.contact .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.contact .row .col{
+    z-index: 2;
+}
+.contact .row .col h2{
+    color: blue;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    
+}
+.contact .row .col p{
+    color: black;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    width: 70%;
+}
+.btn-1{
+    background-color: green;
+    color: white;
+    display: inline-block;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    padding: 1.5rem 4rem;
+}
+.contact form div{
+    position: relative;
+    margin: 0 auto;
+}
+.contact form input{
+    font-family: "Roboto",sans-serif;
+    font-size: 1.5rem;
+    text-indent: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 2rem 0;
+    outline: none;
+    border: none;
+}
+.contact form a{
+    font-size: 1.25rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: green;
+    color: white;
+    margin: 0.75rem;
+    padding: 1.5rem 5rem;
+    border-radius: 1rem;
 }
