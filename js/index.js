@@ -1,9 +1,7 @@
-const hamBurger = document.querySelector(".hamBurger");
-const navList = document.querySelector(".nav-list");
+let menuBtn = document.querySelector('#menu-btn');
+let navBar = document.querySelector('.header .flex .navbar');
 
-if(hamBurger){
-    hamBurger.addEventListener("click", () =>{
-        navList.classList.toggle("open");
-    })
-    navList.classList.toggle("open");
+menuBtn.onclick = () => {
+    menuBtn.classList.toggle("fa-times");
+    navBar.classList.toString('active')
 }
