@@ -4,6 +4,7 @@
  --light-white: #aaa;
  --black: #3d3d3d;   
 --light-bg: #4b4b4b;
+--alice-blue: hsl(210, 100%, 97%);
 }
 *{
     font-family: "Roboto", sans-serif;
@@ -253,9 +254,9 @@ width: 100%;
 
 /* contact section */
  .contact h4{
-    margin: 0 0 1rem 52.5rem;
+    margin: 0 0 2rem 52.5rem;
     font-size: 2rem;
-    width: 110px;
+    width: 150px;
     padding: 0.5rem 1rem;
     border-radius: 100px;
     background-color: var(--light-white);
@@ -263,37 +264,86 @@ width: 100%;
     text-align: center;
 }
  
- /* .services-list{
+.contact .row{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    gap:1.5rem;
  }
- .services-card{
-    position: relative;
-    background: var(--white);
-    text-align: center;
-    padding: 40px 30px;
-    box-shadow: 0 16px 32px hsla(188, 63%, 7%, 0.1);
+ 
+ .contact .row .image{
+    flex: 1 1 40rem;
+ }
+ 
+ .contact .row .image img{
+    width: 75%;
+ }
+ 
+ .contact .row form{
+    flex:1 1 40rem;
+ }
+ 
+ .contact .row form .box{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    font-size: 1.5rem;
+    color:var(--white);
+    padding:1.2rem;
+    text-transform: none;
+ }
+ 
+ .contact .row form span{
+    font-size: 1.6rem;
+    color:var(--light-white);
+ }
+ .contact .row form textarea{
+    height: 120px;
 }
-.service-card .card-icon {
-    width: max-content;
-    margin-inline: auto;
-    margin-bottom: 20px;
-  }
-  .service-card .card-title { margin-bottom: 15px; }
+ .contact .row form .button{
+    border: none;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: green;
+    color: white;
+    border-radius: 1rem ;
+}
+ 
+/* footer */
+.footer{
+    background-color: var(--light-bg);
+    text-align: center;
+    /* padding-bottom: 7rem; */
+ }
+ 
+ .footer .share a{
+    margin:0 .3rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    color:var(--white);
+    background-color: var(--black);;
+ }
+ 
+ .footer .share a:hover{
+    background-color: var(--green);
+ }
+ 
+ .footer .credit{
+    margin-top: 2rem;
+    padding:1.5rem;
+    border-top: .1rem solid var(--light-white);
+    font-size: 1.5rem;
+    color:var(--light-white);
+ }
+ 
 
-  .service-card .card-title > a:is(:hover, :focus) { color: rgb(243, 109, 0); }
-  
-  .service-card .card-text {
-    color: hsl(200, 15%, 43%);
-    font-size: 0.7rem;
-    line-height: 1.5;
-    margin-bottom: 25px;
-  }   */
-
-
-/* media queries */
+ /* media queries */
 
 @media (max-width:996px) {
     html{
