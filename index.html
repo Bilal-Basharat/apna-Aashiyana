@@ -18,7 +18,7 @@
   <!-- header section starts -->
     <header class="header">
         <section class="flex">
-          <a href="#home" class="logo"><img src="./apna ashiyana logo.png" width="50px" height="50px" alt=""></a>
+          <a href="#home" class="logo"><img src="./apna ashiyana logo.png" width="80px" height="50px" alt=""></a>
           <nav class="navbar">
             <a href="#home"> Home </a>
             <a href="#about"> About </a>
@@ -41,6 +41,36 @@
             <button id="btn"> Search</button>
           </div>
         </div>
+        <div class="col">
+        <div class="col1" id="loadCalc">
+          <img src="./assets/home load calc..png" class="centreImg" alt="">
+          <h2>Home Load Calculator</h2>
+          <p>Explore your options in detail using our home loan calculator to get the best loan package to achieve your dream home</p>
+          <div class="content1">
+            <h2>About Home Loan Calculator</h2>
+            <p>Everyone dreams of owning their own house at some point in their life. However, this is not easily achievable given the fact that the process requires a lot of dedication, consideration, and of course, money. Having said that, this does not mean that you should become disheartened with the entire venture, and not give it a shot.</p>
+          </div>
+        </div>
+        <div class="col1" id="ConstructorCostCalc">
+          <img src="./assets/ConstructorCostCalculator.png" class="centreImg" alt="">
+          <h2>Constructor Cost Calculator </h2>
+          <p> Use our Construction Cost Calculator to get a quick estimate of required building materials along with their costs.</p>
+          <div class="content1">
+            <h2> What is Constructor Cost Calculator? </h2>
+            <p>A house construction cost calculator is an online tool that assists you in estimating the cost of building a new house. It enables you to calculate the cost of constructing a house in varying sizes and quality by providing a brief overview of the cost of construction materials and labor expenses. This is extremely useful for planning the construction of a new home.</p>
+          </div>
+
+        </div>
+        <div class="col1" id="ROICalculator">
+          <img src="./assets/property inde.png" class="centreImg" alt="">
+          <h2>About ROI Calculator</h2>
+<p>Use our ROI Calculator to get a quick estimate of your profit </p>
+          <div class="content1">
+            <h2>What is ROI?</h2>
+            <p>ROI (Return on investment) is a mathematical calculation that allows investors to evaluate the performance of a particular asset over a period of time, in comparison to others. To summarise, it is the profit an investor gains over his/her investment.</p>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
     <!-- end of home section -->
@@ -95,17 +125,25 @@
       <h4> Contact Us </h4>
       <div class="row">
 <div class="image"> <img src="./images/contact us.jpg" alt=""></div>
-<form action="" method="post">
-  <!-- <span>your name</span> -->
-  <input type="text" required placeholder="enter your full name" maxlength="50" name="name" class="box">
-  <!-- <span>your email</span> -->
-  <input type="email" required placeholder="enter your valie email" maxlength="50" name="email" class="box">
-  <!-- <span>your number</span> -->
-  <input type="number" required placeholder="enter your valie number" max="9999999999" min="0" name="number" class="box" onkeypress="if(this.value.length == 10) return false;">
-  <!-- <span>Subject</span> -->
-  <input type="text" required placeholder="Subject" maxlength="50" name="name" class="box">
-  <textarea placeholder="Message" name="sender_message" id="sender_message" cols="30" rows="10" class="box"></textarea>
-  <input type="submit" value="send message" class="button" name="send">
+
+<form action="#" name="queryForm" onsubmit="return validation()">
+
+  <input type="text" required placeholder="enter your full name" maxlength="20" name="userName" class="box" id="name">
+   <span id="userNameValidation" class="text-danger"> </span>
+   
+   <input type="email" required placeholder="enter your valid email" maxlength="50" name="email" class="box" id="email"> 
+   <span id="emailValidation" class="text-danger"> </span>
+
+   <input type="text" required placeholder="enter your valid number" name="number" class="box" id="number">
+   <span id="numberValidation" class="text-danger"> </span>
+   
+   <input type="text" required placeholder="Subject" maxlength="50" name="subject" class="box" id="subject">
+   <span id="subjectValidation" class="text-danger"> </span>
+   
+   <textarea placeholder="Message" name="sender_message" id="userMessage" cols="30" rows="10" class="box" ></textarea>
+   <span id="messageValidation" class="text-danger"> </span>
+  
+   <input type="submit" value="send message" class="button" name="send">
 </form>
 
       </div>
@@ -119,15 +157,14 @@
 
    <section>
 
-      <div class="share">
-         <a href="#" class="fab fa-facebook-f"></a>
-         <a href="#" class="fab fa-twitter"></a>
-         <a href="#" class="fab fa-linkedin"></a>
-         <a href="#" class="fab fa-instagram"></a>
-         <a href="#" class="fab fa-youtube"></a>
-      </div>
-
-      <div class="credit">&copy; copyright @ 2022 by Bilal Basharat | all rights reserved!</div>
+<div class="icons">
+    <a href="#" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+    <a href="#" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+    <a href="#" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+    <a href="#" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+    <a href="#" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+</div>
+      <div class="credit">&copy; copyright @ 2022 by Apnaashiyana.com. All rights reserved!</div>
 
    </section>
 
@@ -139,6 +176,6 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
   <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="/js/script.js"></script>
 </body>
 </html>
