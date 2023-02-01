@@ -103,7 +103,7 @@ section{
 
 
 .home{
-    background-image: url("/images/cityscape-wuxi.jpg");
+    background-image: url("//images/cityscape-wuxi.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
